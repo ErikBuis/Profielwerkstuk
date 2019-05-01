@@ -1,4 +1,10 @@
-NeuralNetwork = {}
+--[[
+	Code voor eindproject profielwerkstuk VWO
+	Gemaakt door Erik Buis
+	Laatst gewijzigd: 2-3-2019
+]]
+
+NeuralNetwork = {} --GLOBAL
 
 function NeuralNetwork.visualise(nn)
     local function WBcolor(value) --weight/bias-color
@@ -149,6 +155,8 @@ function BytesToNumber(text, a, b) --This function converts the ASCII-characters
     end
     return rn
 end
+
+-------------------------PROGRAM--------------------------
 
 local status = 'train' --status of training, 'train' OR status of testing, 't10k'
 local file = io.open('HandwrittenNumbers/'..status..'-images.png', 'r')
